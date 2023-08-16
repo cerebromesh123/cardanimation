@@ -276,14 +276,22 @@
         <image overflow="visible" enable-background="new    " width="200" height="239" xlink:href="images/insta.png"  transform="matrix(1.014 0 0 1.014 78.929 112.2402)">
         </image>
        </g>
-       <image id="vcard_18" class="vCardBalls" overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.2566 0 0 0.2566 -8.9309 180.937)">
+       <g id="vcardB_1" class="vCardBalls">
+       <image  overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.2566 0 0 0.2566 -8.9309 180.937)">
        </image>
-       <image id="vcard_19" class="vCardBalls" overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.1502 0 0 0.1502 273.0002 389.1143)">
+    </g>
+    <g  id="vcardB_2" class="vCardBalls">
+       <image   overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.1502 0 0 0.1502 273.0002 389.1143)">
        </image>
-       <image id="vcard_20" class="vCardBalls" overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.1785 0 0 0.1785 264.2249 18.1338)">
+    </g>
+    <g id="vcardB_3" class="vCardBalls">
+       <image   overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.1785 0 0 0.1785 264.2249 18.1338)">
        </image>
-       <image id="vcard_21" class="vCardBalls" overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.1216 0 0 0.1216 314.2288 228)">
+    </g>
+    <g id="vcardB_4" class="vCardBalls">
+       <image  overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.1216 0 0 0.1216 314.2288 228)">
        </image>
+       </g>
        </svg>
 <!-- instagram -->
 
@@ -308,7 +316,7 @@
         tm.set("#vcard_17",{ x:-randomNumber(600, 800), y:-randomNumber(300, 500) })
         tm.set("#cardFirst",{scale:1,display:'block'})
         tm.set("#cardEl",{scale:0,opacity:0, display:'none'})
-       
+        tm.set(".vCardBalls",{x:-600, y:-500, opacity:0, display:'none'})
         // var vard18 =  $('#vcard_18')[0].getBoundingClientRect();
         // var vard19 =  $('#vcard_19')[0].getBoundingClientRect();
         // var vard20 =  $('#vcard_20')[0].getBoundingClientRect();
@@ -346,25 +354,38 @@
                 .then(
                     tm.to("#SVGID_1_",{scale:1.75, opacity:0}),
                     tm.to("#vCard",{x:cdY, y:cdY+'%', scale:1, duration:2, opacity:1, display:'block',  ease:Elastic.easeOut}),
-                    tm.to('.vCardBalls',1,{
-                            x:yPosition, 
-                            y:xPosition,  
-                            yoyo: true, 
-                            ease:'cubic.inOut',
-                            opacity:0,
-                        }, '+=0.25'),
                         tm.fromTo("#vcard_17",{ x:0, y:0, scale:0, opacity:0},{scale:1,duration:1, opacity:1 }),
                         tm.fromTo("#dName",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#dlinks",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
+                        tm.fromTo(".vCardBalls",{x:0, y:0,},{ x:0, y:0, yoyo: true, duration:1,  ease:'cubic.inOut', opacity:1, display:'block',}),
+                        tm.fromTo("#vcardB_1",{x:0,y:0,},{x:-10,y:70, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
+                        tm.fromTo("#vcardB_2",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
+                        tm.fromTo("#vcardB_3",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:4, yoyo:true, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_7",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_10",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_11",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.to("#instagram",{x:50,y:150, opacity:1, scale:0.75, display:'block', ease:'cubic.inOut'}, '+=1'),
-                        tm.to("#instagram",{x:0,y:150, opacity:0, scale:0.75, display:'none', ease:'cubic.inOut'}, '+=2')
+                        tm.to("#instagram",{x:0,y:150, opacity:0, scale:0, transformOrigin:'top center', display:'none', ease:'cubic.inOut'}, '+=2'),
+                        ballsMove(),
                 )
                 }});      
             }
             
+                  
+            function ballsMove(){
+                $(".vCardBalls").each(function(){
+                    tm.to(this, 0.5,{ x:0, y:0, yoyo: true, duration:4,  ease:'cubic.inOut', opacity:1, display:'block',}, '+=0.5')
+                    // tm.fromTo("#vcardB_1",{x:0,y:50,},{x:0,y:0, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'})
+                    // tm.fromTo("#vcardB_2",{x:0,y:75,},{x:0,y:15, repeat:-1, duration:5, yoyo:true, ease:'cubic.inOut'})
+                    // tm.fromTo("#vcardB_3",{x:0,y:15,},{x:0,y:75, repeat:-1, duration:5, yoyo:true, ease:'cubic.inOut'})
+                    // tm.fromTo("#vcardB_4",{x:0,y:15,},{x:0,y:75, repeat:-1, duration:5, yoyo:true, ease:'cubic.inOut'})
+                })
+            }
+            function randomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min + 15)) + min;
+            }
+
+
             // $(".vCardBalls").each(function(){
             //     tm.to(this,{scale:1, x:cdY, y:cdY+'%', duration:2, opacity:1, display:'block',  ease:Elastic.easeOut})
             // })
@@ -395,23 +416,6 @@
         // tm.to(".cricle",{x:randomNumber(600, 200), y:randomNumber(600, 400),  yoyo: true, duration:1})
         // tm.set("#cardEl",{ scale:0, duration:0.5, ease:Elastic.easeOut, opacity:0,})
         // tm.to("#vCard",{x:200, y:15, opacity:1, display:'block'})
-       
-
-        function randomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 15)) + min;
-        }
-        
-        window.onload = function(){
-            randomNumber(5, 200)
-        }
-        // tl.fromTo(".card-new", {
-        //     scaleX:200, scaleY:100,
-        //     duration:5,
-        //     fill:'#ff0000'
-
-        // },{})
-      
-
         // tm.to("#cardFirst",{ scale:0.5, delay:1, opacity:0, display:'none', ease:Elastic.easeOut}, '+=1')
 
         
