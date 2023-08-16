@@ -152,8 +152,12 @@
                <path fill="#3C3C3C" d="M168.13,237.02h-11.11c-1.27,0-2.3-1.029-2.3-2.3v-0.64c0-1.27,1.03-2.3,2.3-2.3h11.11
                    c1.27,0,2.3,1.03,2.3,2.3v0.64C170.43,235.99,169.4,237.02,168.13,237.02z"/>
            </g>
+           <g id="dName">
            <text transform="matrix(1 0 0 1 81.7732 221.6348)" font-family="'ArialRoundedMTBold'" font-size="22.6761">Jane Dough</text>
-           <text transform="matrix(1 0 0 1 81.446 310.1328)" font-family="'ArialRoundedMTBold'" font-size="9.2416">Links</text>
+        </g>
+        <g id="dlinks">
+           <text  transform="matrix(1 0 0 1 81.446 310.1328)" font-family="'ArialRoundedMTBold'" font-size="9.2416">Links</text>
+        </g>
            <g id="vcard_8">
                <path id="XMLID_2101_" opacity="0.24" fill="#222221" enable-background="new    " d="M92.69,291.05L92.69,291.05
                    c-6.21,0-11.25-5.03-11.25-11.25l0,0c0-6.21,5.03-11.25,11.25-11.25l0,0c6.21,0,11.24,5.03,11.24,11.25l0,0
@@ -284,7 +288,13 @@
         var cardX = jQuery("#cardFirst").width() / 2;
         var tm = new TimelineMax({ yoyo: true});
         var tl = gsap.timeline({ yoyo: true});
-        tm.set("#vCard",{x:-100,y:-200, opacity:0, scale:0.5, display:'none'})
+            const svgTextElement = document.getElementById('dName');
+            const textRect = svgTextElement.getBoundingClientRect();
+            const xPosition = textRect.left;
+            const yPosition = textRect.top;
+        tm.set("#vCard",{x:-100,y:-200, opacity:0, scale:0.5, opacity:0, display:'none'})
+        // tm.set("#dName",{opacity:0,x:0, y:0}),
+        tm.set("#vcard_17",{ x:-randomNumber(600, 800), y:-randomNumber(300, 500) })
         tm.set("#cardFirst",{scale:1,display:'block'})
         tm.set("#cardEl",{scale:0,opacity:0, display:'none'})
        
@@ -326,13 +336,17 @@
                     tm.to("#SVGID_1_",{scale:1.75, opacity:0}),
                     tm.to("#vCard",{x:cdY, y:cdY+'%', scale:1, duration:2, opacity:1, display:'block',  ease:Elastic.easeOut}),
                     tm.to('.vCardBalls',1,{
-                            x:cardX, 
-                            y:cardY,  
+                            x:yPosition, 
+                            y:xPosition,  
                             yoyo: true, 
                             ease:'cubic.inOut',
                             opacity:0,
-                        }, '+=0.25')
-                    
+                        }, '+=0.25'),
+                        tm.set("#vcard_17",{ x:0, y:0, duration:1, }),
+                        tm.fromTo("#dName",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:Elastic.easeOut}),
+                        tm.fromTo("#dlinks",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:Elastic.easeOut}),
+                        tm.fromTo("#vcard_7",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:Elastic.easeOut}),
+                       
                 )
                 }});      
             }
