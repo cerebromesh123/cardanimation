@@ -352,21 +352,18 @@
                     ease:'cubic.inOut'
                  })
                 .then(
+                    ballsMove(),
                     tm.to("#SVGID_1_",{scale:1.75, opacity:0}),
                     tm.to("#vCard",{x:cdY, y:cdY+'%', scale:1, duration:2, opacity:1, display:'block',  ease:Elastic.easeOut}),
                         tm.fromTo("#vcard_17",{ x:0, y:0, scale:0, opacity:0},{scale:1,duration:1, opacity:1 }),
                         tm.fromTo("#dName",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#dlinks",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
-                        tm.fromTo(".vCardBalls",{x:0, y:0,},{ x:0, y:0, yoyo: true, duration:1,  ease:'cubic.inOut', opacity:1, display:'block',}),
-                        tm.fromTo("#vcardB_1",{x:0,y:0,},{x:-10,y:70, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
-                        tm.fromTo("#vcardB_2",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
-                        tm.fromTo("#vcardB_3",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:4, yoyo:true, ease:'cubic.inOut'}),
+                       
                         tm.fromTo("#vcard_7",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_10",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_11",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.to("#instagram",{x:50,y:150, opacity:1, scale:0.75, display:'block', ease:'cubic.inOut'}, '+=1'),
                         tm.to("#instagram",{x:0,y:150, opacity:0, scale:0, transformOrigin:'top center', display:'none', ease:'cubic.inOut'}, '+=2'),
-                        ballsMove(),
                 )
                 }});      
             }
@@ -374,11 +371,12 @@
                   
             function ballsMove(){
                 $(".vCardBalls").each(function(){
-                    tm.to(this, 0.5,{ x:0, y:0, yoyo: true, duration:4,  ease:'cubic.inOut', opacity:1, display:'block',}, '+=0.5')
-                    // tm.fromTo("#vcardB_1",{x:0,y:50,},{x:0,y:0, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'})
-                    // tm.fromTo("#vcardB_2",{x:0,y:75,},{x:0,y:15, repeat:-1, duration:5, yoyo:true, ease:'cubic.inOut'})
-                    // tm.fromTo("#vcardB_3",{x:0,y:15,},{x:0,y:75, repeat:-1, duration:5, yoyo:true, ease:'cubic.inOut'})
-                    // tm.fromTo("#vcardB_4",{x:0,y:15,},{x:0,y:75, repeat:-1, duration:5, yoyo:true, ease:'cubic.inOut'})
+                    tl.to(this, 0.5,{ x:0, y:0, yoyo: true, duration:4,  ease:'cubic.inOut', opacity:1, display:'block',}, '+=0.5')
+                    tl.fromTo(".vCardBalls",{x:0, y:0,},{ x:0, y:0, yoyo: true, duration:1,  ease:'cubic.inOut', opacity:1, display:'block',}),
+                    tl.fromTo("#vcardB_1",{x:0,y:0,},{x:-10,y:70, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
+                    tl.fromTo("#vcardB_2",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
+                    tl.fromTo("#vcardB_3",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:4, yoyo:true, ease:'cubic.inOut'}),
+                   tl.play();
                 })
             }
             function randomNumber(min, max) {
