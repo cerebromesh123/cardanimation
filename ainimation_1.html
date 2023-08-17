@@ -276,6 +276,10 @@
         <image overflow="visible" enable-background="new    " width="200" height="239" xlink:href="images/insta.png"  transform="matrix(1.014 0 0 1.014 78.929 112.2402)">
         </image>
        </g>
+       <g id="linkedin">
+        <image overflow="visible" enable-background="new    " width="200" height="239" xlink:href="images/linkedin.png"  transform="matrix(1.014 0 0 1.014 78.929 112.2402)">
+        </image>
+       </g>
        <g id="vcardB_1" class="vCardBalls">
        <image  overflow="visible" width="358" height="398" xlink:href="images/ball-b-1.png"  transform="matrix(0.2566 0 0 0.2566 -8.9309 180.937)">
        </image>
@@ -312,6 +316,7 @@
             const yPosition = textRect.top;
         tm.set("#vCard",{x:-100,y:-200, opacity:0, scale:0.5, opacity:0, display:'none'})
         tm.set("#instagram",{x:0,y:600, opacity:0, scale:0.5, opacity:0, display:'none'})
+        tm.set("#linkedin",{x:0,y:600, opacity:0, scale:0.5, opacity:0, display:'none'})
         // tm.set("#dName",{opacity:0,x:0, y:0}),
         tm.set("#vcard_17",{ opacity:0, display:'none'})
         tm.set("#cardFirst",{scale:1,display:'block'})
@@ -362,8 +367,11 @@
                         tm.fromTo("#vcard_10",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_11",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         ballsMove(),
-                        tm.to("#instagram",{x:0,y:120, opacity:1, scale:0.75, display:'block', ease:'cubic.inOut'}, '+=1'),
+                        tm.to("#instagram",{x:0,y:175, opacity:1, scale:0.65, display:'block', ease:'cubic.inOut'}, '+=1'),
                         tm.to("#instagram",{x:30,y:185, opacity:0, scale:0, transformOrigin:'top center', display:'none', ease:'cubic.inOut'}, '+=2'),
+                        tm.to("#linkedin",{x:-15,y:175, opacity:1, scale:0.65, display:'block', ease:'cubic.inOut'}, '+=1'),
+                        tm.to("#linkedin",{x:-15,y:185, opacity:0, scale:0, transformOrigin:'top center', display:'none', ease:'cubic.inOut'}, '+=2'),
+                        
                 )
                 }});      
             }
@@ -373,7 +381,7 @@
                 $(".vCardBalls").each(function(){
                     tl.to(this, 0.5,{ x:0, y:0, yoyo: true, duration:4,  ease:'cubic.inOut', opacity:1, display:'block',}, '+=0.5')
                     tl.fromTo(".vCardBalls",{x:0, y:0,},{ x:0, y:0, yoyo: true, duration:1,  ease:'cubic.inOut', opacity:1, display:'block',}),
-                    tl.fromTo("#vcardB_1",{x:0,y:0,},{x:-10,y:70, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
+                    tl.fromTo("#vcardB_1",{x:0,y:70, scale:0.9},{x:-10,y:-70, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
                     tl.fromTo("#vcardB_2",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'}),
                     tl.fromTo("#vcardB_3",{x:0,y:0,},{x:-60,y:0, repeat:-1, duration:4, yoyo:true, ease:'cubic.inOut'}),
                    tl.play();
