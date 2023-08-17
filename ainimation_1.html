@@ -313,7 +313,7 @@
         tm.set("#vCard",{x:-100,y:-200, opacity:0, scale:0.5, opacity:0, display:'none'})
         tm.set("#instagram",{x:0,y:600, opacity:0, scale:0.5, opacity:0, display:'none'})
         // tm.set("#dName",{opacity:0,x:0, y:0}),
-        tm.set("#vcard_17",{ x:-randomNumber(600, 800), y:-randomNumber(300, 500) })
+        tm.set("#vcard_17",{ opacity:0, display:'none'})
         tm.set("#cardFirst",{scale:1,display:'block'})
         tm.set("#cardEl",{scale:0,opacity:0, display:'none'})
         tm.set(".vCardBalls",{x:-600, y:-500, opacity:0, display:'none'})
@@ -352,18 +352,18 @@
                     ease:'cubic.inOut'
                  })
                 .then(
-                    ballsMove(),
+                   
                     tm.to("#SVGID_1_",{scale:1.75, opacity:0}),
                     tm.to("#vCard",{x:cdY, y:cdY+'%', scale:1, duration:2, opacity:1, display:'block',  ease:Elastic.easeOut}),
-                        tm.fromTo("#vcard_17",{ x:0, y:0, scale:0, opacity:0},{scale:1,duration:1, opacity:1 }),
-                        tm.fromTo("#dName",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
+                        tm.fromTo("#vcard_17",{x:-500,y:0, scale:0, display:'block', opacity:0},{x:0,y:0,scale:1,duration:1, opacity:1 }),
+                        tm.fromTo("#dName",{x:-500,y:0, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#dlinks",{x:-500,y:-600, scale:1.5, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
-                       
                         tm.fromTo("#vcard_7",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_10",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
                         tm.fromTo("#vcard_11",{x:-500, opacity:0 },{x:0,y:0, duration:2, scale:1,opacity:1, ease:'cubic.inOut'}),
-                        tm.to("#instagram",{x:50,y:150, opacity:1, scale:0.75, display:'block', ease:'cubic.inOut'}, '+=1'),
-                        tm.to("#instagram",{x:0,y:150, opacity:0, scale:0, transformOrigin:'top center', display:'none', ease:'cubic.inOut'}, '+=2'),
+                        ballsMove(),
+                        tm.to("#instagram",{x:0,y:120, opacity:1, scale:0.75, display:'block', ease:'cubic.inOut'}, '+=1'),
+                        tm.to("#instagram",{x:30,y:185, opacity:0, scale:0, transformOrigin:'top center', display:'none', ease:'cubic.inOut'}, '+=2'),
                 )
                 }});      
             }
