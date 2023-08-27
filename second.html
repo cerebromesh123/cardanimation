@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .container {
+            text-align: center;
+            border: 1px solid #ff0000;
+            position: relative;
+            height: 500px;
+            width: 800px;
+        }
+
+        .vcenter {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        /* .d-none {
+            display: none
+        } */
+
+        .card-new {
+            width: 250px;
+            height: 150px;
+            border: 1px solid #ff0000;
+        }
+       svg{
+        position:absolute;
+        left:0; 
+        right:0;
+        top:0;
+        bottom:0;
+        margin: auto;
+        height:100%;
+       }
+       .card{
+        width:300px;
+        height: 250px;
+        position: absolute;
+        left: 0;
+        right:0;
+        bottom:0;
+        top:0;
+        margin:auto;
+       }
+       .red{
+        background-color: #ff0000;
+       }
+       .yellow{
+        background-color: yellow;
+       }
+       .orange{
+        background-color: orange;
+       }
+       .black{
+        background-color: black;
+       }
+       .green{
+        background-color: green;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="main">   
+        <div class="card-1 card red"></div>
+        <div class="card-2 card yellow"></div>
+        <div class="card-3 card orange"></div>
+        <div class="card-4 card black"></div>
+        <div class="card-5 card green"></div>
+        <div class="card-6 card red"></div>
+        <div class="card-7 card orange"></div>
+        <!-- <svg version="1.1" id="Layer_2_copy_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" width="447.5px" height="450.5px" viewBox="0 -343 447.5 450.5" enable-background="new 0 -343 447.5 450.5"
+        xml:space="preserve">
+   <g>
+       <path fill="#EF4419" d="M143.221-17.373L7.95-152.644c-2.887-2.886-2.887-7.544,0-10.431l82.461-82.461
+           c2.887-2.886,7.544-2.886,10.431,0l135.271,135.271c2.886,2.886,2.886,7.544,0,10.431l-82.527,82.461
+           C150.765-14.486,146.042-14.486,143.221-17.373z"/>
+       <g>
+           <path fill="#FFFFFF" d="M91.395-221.657c0.722,0.722,0.722,1.968,0,2.69s-1.968,0.722-2.689,0s-0.722-1.968,0-2.69
+               C89.427-222.444,90.608-222.444,91.395-221.657z"/>
+           <path fill="#FFFFFF" d="M96.512-219.557c0.722,0.722,0.722,1.968,0,2.689s-1.968,0.722-2.69,0s-0.722-1.968,0-2.689
+               C94.61-220.344,95.791-220.344,96.512-219.557z"/>
+           <path fill="#FFFFFF" d="M101.235-221.591c0.722,0.722,0.722,1.968,0,2.689s-1.968,0.722-2.689,0s-0.722-1.968,0-2.689
+               S100.514-222.313,101.235-221.591z"/>
+           <path fill="#FFFFFF" d="M103.466-226.511c0.722,0.722,0.722,1.968,0,2.69s-1.968,0.722-2.689,0s-0.722-1.968,0-2.69
+               S102.679-227.233,103.466-226.511z"/>
+           <path fill="#FFFFFF" d="M101.17-231.431c0.722,0.722,0.722,1.968,0,2.689s-1.968,0.722-2.69,0c-0.721-0.722-0.721-1.968,0-2.689
+               C99.202-232.218,100.448-232.218,101.17-231.431z"/>
+           <path fill="#FFFFFF" d="M96.446-233.465c0.722,0.722,0.722,1.968,0,2.689c-0.721,0.722-1.968,0.722-2.689,0
+               c-0.722-0.721-0.722-1.968,0-2.689C94.479-234.252,95.725-234.252,96.446-233.465z"/>
+           <path fill="#FFFFFF" d="M91.264-231.563c0.722,0.722,0.722,1.968,0,2.69s-1.968,0.722-2.69,0s-0.722-1.968,0-2.69
+               S90.542-232.284,91.264-231.563z"/>
+           <path fill="#FFFFFF" d="M89.558-226.577c0.722,0.722,0.722,1.968,0,2.689c-0.721,0.722-1.968,0.722-2.689,0
+               c-0.722-0.721-0.722-1.968,0-2.689S88.771-227.298,89.558-226.577z"/>
+       </g>
+   </g>
+   <g>
+       <g>
+           <g>
+               <path fill="none" stroke="#F3AD28" stroke-width="7" stroke-miterlimit="10" d="M224.042-294.409v191.295
+                   c0,4.067-3.28,7.348-7.348,7.348h-116.64c-4.067,0-7.348-3.28-7.348-7.348v-191.295c0-4.067,3.28-7.347,7.348-7.347h116.574
+                   C220.696-301.756,224.042-298.476,224.042-294.409z"/>
+           </g>
+       </g>
+   </g>
+   <g>
+       <path fill="#DC1C9A" d="M347.111-244.552L211.84-109.346c-2.887,2.887-7.544,2.887-10.431,0l-82.396-82.396
+           c-2.887-2.886-2.887-7.544,0-10.431l135.205-135.271c2.887-2.887,7.545-2.887,10.431,0l82.462,82.461
+           C349.998-252.096,349.998-247.438,347.111-244.552z"/>
+       <g>
+           <path fill="#FFFFFF" d="M142.761-192.726c0.722-0.722,1.968-0.722,2.69,0s0.722,1.968,0,2.689c-0.722,0.722-1.968,0.722-2.69,0
+               C142.04-190.824,142.04-192.004,142.761-192.726z"/>
+           <path fill="#FFFFFF" d="M144.861-197.909c0.722-0.722,1.968-0.722,2.689,0s0.722,1.968,0,2.69c-0.722,0.721-1.968,0.721-2.689,0
+               C144.139-196.006,144.139-197.187,144.861-197.909z"/>
+           <path fill="#FFFFFF" d="M142.893-202.632c0.722-0.722,1.968-0.722,2.69,0s0.722,1.968,0,2.689s-1.968,0.722-2.69,0
+               S142.171-201.845,142.893-202.632z"/>
+           <path fill="#FFFFFF" d="M137.973-204.862c0.722-0.722,1.968-0.722,2.689,0s0.722,1.968,0,2.689s-1.968,0.722-2.689,0
+               S137.251-204.075,137.973-204.862z"/>
+           <path fill="#FFFFFF" d="M132.987-202.566c0.722-0.722,1.968-0.722,2.689,0c0.722,0.722,0.722,1.968,0,2.69
+               c-0.721,0.721-1.968,0.721-2.689,0C132.265-200.598,132.265-201.779,132.987-202.566z"/>
+           <path fill="#FFFFFF" d="M130.953-197.843c0.722-0.721,1.968-0.721,2.689,0c0.722,0.722,0.722,1.968,0,2.69
+               c-0.721,0.722-1.968,0.722-2.689,0S130.231-197.056,130.953-197.843z"/>
+           <path fill="#FFFFFF" d="M132.921-192.661c0.721-0.722,1.968-0.722,2.689,0s0.722,1.968,0,2.69s-1.968,0.722-2.689,0
+               C132.2-190.692,132.2-191.873,132.921-192.661z"/>
+           <path fill="#FFFFFF" d="M137.907-190.889c0.722-0.722,1.968-0.722,2.69,0s0.722,1.968,0,2.689s-1.968,0.722-2.69,0
+               C137.12-188.987,137.12-190.167,137.907-190.889z"/>
+       </g>
+   </g>
+   <g>
+       <path fill="#22201E" d="M396.641-118.399H205.411c-4.067,0-7.347-3.28-7.347-7.348v-116.575c0-4.067,3.28-7.347,7.347-7.347
+           h191.229c4.067,0,7.348,3.28,7.348,7.347v116.575C404.054-121.679,400.708-118.399,396.641-118.399z"/>
+       <g>
+           <path fill="#FFFFFF" d="M215.579-226.183c1.05,0,1.903,0.853,1.903,1.902c0,1.05-0.854,1.903-1.903,1.903
+               c-1.049,0-1.902-0.853-1.902-1.903C213.677-225.33,214.53-226.183,215.579-226.183z"/>
+           <path fill="#FFFFFF" d="M220.696-228.348c1.05,0,1.902,0.853,1.902,1.903c0,1.049-0.853,1.902-1.902,1.902
+               s-1.902-0.853-1.902-1.902C218.794-227.495,219.646-228.348,220.696-228.348z"/>
+           <path fill="#FFFFFF" d="M222.599-233.071c1.05,0,1.902,0.853,1.902,1.902c0,1.05-0.853,1.903-1.902,1.903
+               s-1.902-0.853-1.902-1.903C220.696-232.218,221.549-233.071,222.599-233.071z"/>
+           <path fill="#FFFFFF" d="M220.696-238.123c1.05,0,1.902,0.853,1.902,1.902s-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902
+               S219.646-238.123,220.696-238.123z"/>
+           <path fill="#FFFFFF" d="M215.579-240.025c1.05,0,1.903,0.853,1.903,1.902s-0.854,1.902-1.903,1.902
+               c-1.049,0-1.902-0.853-1.902-1.902S214.53-240.025,215.579-240.025z"/>
+           <path fill="#FFFFFF" d="M210.791-238.123c1.05,0,1.902,0.853,1.902,1.902s-0.853,1.902-1.902,1.902
+               c-1.049,0-1.902-0.853-1.902-1.902S209.741-238.123,210.791-238.123z"/>
+           <path fill="#FFFFFF" d="M208.495-233.071c1.049,0,1.902,0.853,1.902,1.902c0,1.05-0.853,1.903-1.902,1.903
+               c-1.05,0-1.902-0.853-1.902-1.903C206.592-232.218,207.445-233.071,208.495-233.071z"/>
+           <path fill="#FFFFFF" d="M210.791-228.348c1.05,0,1.902,0.853,1.902,1.903c0,1.049-0.853,1.902-1.902,1.902
+               c-1.049,0-1.902-0.853-1.902-1.902C208.888-227.495,209.741-228.348,210.791-228.348z"/>
+       </g>
+   </g>
+   <g>
+       <g>
+           <g>
+               <path fill="none" stroke="#52E396" stroke-width="7" stroke-miterlimit="10" d="M302.765-224.412L437.97-89.141
+                   c2.887,2.887,2.887,7.545,0,10.431L355.574,3.751c-2.887,2.887-7.545,2.887-10.431,0L209.872-131.52
+                   c-2.886-2.886-2.886-7.544,0-10.431l82.462-82.461C295.221-227.233,299.878-227.233,302.765-224.412z"/>
+           </g>
+       </g>
+   </g>
+   <g>
+       <path fill="#40453D" d="M221.155,54.135v-191.23c0-4.067,3.28-7.347,7.348-7.347h116.575c4.066,0,7.347,3.28,7.347,7.347V54.199
+           c0,4.068-3.28,7.348-7.347,7.348H228.503C224.436,61.547,221.155,58.268,221.155,54.135z"/>
+       <g>
+           <path fill="#FFFFFF" d="M329.005-126.927c0,1.049-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902
+               c0-1.05,0.853-1.902,1.902-1.902S329.005-127.977,329.005-126.927z"/>
+           <path fill="#FFFFFF" d="M331.17-121.811c0,1.05-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902
+               c0-1.049,0.853-1.902,1.902-1.902S331.17-122.86,331.17-121.811z"/>
+           <path fill="#FFFFFF" d="M335.894-119.908c0,1.05-0.853,1.903-1.902,1.903s-1.902-0.853-1.902-1.903
+               c0-1.049,0.853-1.902,1.902-1.902S335.894-120.958,335.894-119.908z"/>
+           <path fill="#FFFFFF" d="M340.944-121.811c0,1.05-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902
+               c0-1.049,0.853-1.902,1.902-1.902S340.944-122.86,340.944-121.811z"/>
+           <path fill="#FFFFFF" d="M342.781-126.927c0,1.049-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902
+               c0-1.05,0.853-1.902,1.902-1.902C341.994-128.83,342.781-127.977,342.781-126.927z"/>
+           <path fill="#FFFFFF" d="M340.944-131.716c0,1.05-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902s0.853-1.902,1.902-1.902
+               S340.944-132.766,340.944-131.716z"/>
+           <path fill="#FFFFFF" d="M335.894-134.012c0,1.049-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902
+               c0-1.05,0.853-1.903,1.902-1.903S335.894-135.062,335.894-134.012z"/>
+           <path fill="#FFFFFF" d="M331.17-131.716c0,1.05-0.853,1.902-1.902,1.902s-1.902-0.853-1.902-1.902s0.853-1.902,1.902-1.902
+               S331.17-132.766,331.17-131.716z"/>
+       </g>
+   </g>
+   <g>
+       <g>
+           <g>
+               <path fill="none" stroke="#8051FC" stroke-width="7" stroke-miterlimit="10" d="M327.365-39.415L192.094,95.857
+                   c-2.887,2.885-7.544,2.885-10.431,0L99.268,13.395c-2.887-2.887-2.887-7.544,0-10.431l135.205-135.206
+                   c2.887-2.886,7.545-2.886,10.431,0l82.462,82.461C330.252-46.958,330.252-42.301,327.365-39.415z"/>
+           </g>
+       </g>
+   </g>
+   <g>
+       <path fill="#115248" d="M238.934,9.262H47.639c-4.067,0-7.347-3.28-7.347-7.348V-114.66c0-4.067,3.28-7.348,7.347-7.348h191.295
+           c4.067,0,7.348,3.28,7.348,7.348V1.915C246.281,5.982,243.001,9.262,238.934,9.262z"/>
+       <g>
+           <path fill="#FFFFFF" d="M57.807-98.587c1.049,0,1.902,0.853,1.902,1.902s-0.853,1.902-1.902,1.902
+               c-1.05,0-1.902-0.853-1.902-1.902S56.757-98.587,57.807-98.587z"/>
+           <path fill="#FFFFFF" d="M62.99-100.752c1.049,0,1.902,0.853,1.902,1.902s-0.853,1.902-1.902,1.902
+               c-1.05,0-1.903-0.853-1.903-1.902S61.94-100.752,62.99-100.752z"/>
+           <path fill="#FFFFFF" d="M64.826-105.476c1.05,0,1.903,0.854,1.903,1.903c0,1.049-0.853,1.902-1.903,1.902
+               c-1.049,0-1.902-0.854-1.902-1.902C62.99-104.623,63.777-105.476,64.826-105.476z"/>
+           <path fill="#FFFFFF" d="M62.99-110.527c1.049,0,1.902,0.853,1.902,1.902s-0.853,1.902-1.902,1.902
+               c-1.05,0-1.903-0.853-1.903-1.902S61.94-110.527,62.99-110.527z"/>
+           <path fill="#FFFFFF" d="M57.807-112.429c1.049,0,1.902,0.853,1.902,1.902s-0.853,1.902-1.902,1.902
+               c-1.05,0-1.902-0.853-1.902-1.902S56.757-112.429,57.807-112.429z"/>
+           <path fill="#FFFFFF" d="M53.083-110.527c1.05,0,1.903,0.853,1.903,1.902s-0.853,1.902-1.903,1.902
+               c-1.049,0-1.902-0.853-1.902-1.902S52.034-110.527,53.083-110.527z"/>
+           <path fill="#FFFFFF" d="M50.788-105.476c1.05,0,1.902,0.854,1.902,1.903c0,1.049-0.853,1.902-1.902,1.902
+               s-1.902-0.854-1.902-1.902C48.885-104.623,49.738-105.476,50.788-105.476z"/>
+           <path fill="#FFFFFF" d="M53.083-100.752c1.05,0,1.903,0.853,1.903,1.902s-0.853,1.902-1.903,1.902
+               c-1.049,0-1.902-0.853-1.902-1.902S52.034-100.752,53.083-100.752z"/>
+       </g>
+   </g>
+   <image overflow="visible" enable-background="new    " width="1280" height="1280" xlink:href="images/Yellow_Ball.png"  transform="matrix(0.1193 0 0 0.1193 28.8101 -346.7319)">
+   </image>
+   <image overflow="visible" enable-background="new    " width="1280" height="1280" xlink:href="images/Dark_Green_Ball.png"  transform="matrix(0.1125 0 0 0.1125 264.4746 -339.3628)">
+   </image>
+   <image overflow="visible" enable-background="new    " width="1280" height="1280" xlink:href="images/Green_ball.png"  transform="matrix(0.2083 0 0 0.2083 277.2178 -171.4482)">
+   </image>
+   <image overflow="visible" enable-background="new    " width="1280" height="1280" xlink:href="images/Ball with Shadow.png"  transform="matrix(0.212 0 0 0.212 -10.5376 -95.9922)">
+   </image>
+   <image overflow="visible" enable-background="new    " width="1280" height="1280" xlink:href="images/Black_ball.png"  transform="matrix(0.1777 0 0 0.1777 -71.1006 -365.4907)">
+   </image>
+   <image overflow="visible" enable-background="new    " width="1280" height="1280" xlink:href="images/Red_Ball.png"  transform="matrix(0.1326 0 0 0.1326 -51.5874 -148.7256)">
+   </image>
+   </svg> -->
+         
+   
+  
+
+
+    </div>
+    <script src="js/jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <!-- <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
+
+    <script>
+         function randomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 15)) + min;
+        }
+         function moveEl(selector){
+            var tm = new TimelineMax({ yoyo: true });
+            tm.fromTo(selector,
+            {x:0,y:randomNumber(0, 80), scale:0.9},
+            {x:-randomNumber(5, 10), y:-randomNumber(0, 80), repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'})
+            tm.play();
+        }
+        var cardY = jQuery("#cardFirst").height() / 2;
+        var cardX = jQuery("#cardFirst").width() / 2;
+        var tl = gsap.timeline();
+        var tm = new TimelineMax({ yoyo: true });
+
+        tm.to(".card",{onComplete:action, transformOrigin:'bottom right'})
+        function action(){
+            var angles = [0, 45, 90, 135, 180, 225, 270, 315];
+            for(let i=0; i<angles.length; i++){
+                var ids = $(".card-"+i);
+                gsap.to(ids,{
+                    rotate:angles[i],
+                    transformOrigin:'bottom right',
+                    scale:0.75,
+                    x:-100
+                })
+            }
+
+        }
+
+
+
+
+
+        // var angle = 45;
+        // for(let i=0; i<10; i++){
+        //     var ids = $(".card-"+i);
+        //     tm.to(ids,{x:cardY, y:cardX, scale:0.8, rotate:angle, transformOrigin:'left top'})
+        //     angle = angle * i
+        // }
+       
+        // var angles = [0, 45, 90, 135, 180, 225, 270, 315];
+        // var rays = gsap.utils.toArray('.card');
+        // var allText = gsap.utils.toArray('.popUp');
+
+
+
+
+
+
+
+
+// // the prep =====
+// gsap.timeline({
+//   delay:1,
+//   onComplete: action
+// })
+//   .to(rays, {
+//   rotation:function(i, target, list) {
+//     return -angles[i]},
+//   ease:'none',
+//   transformOrigin:'left center',
+// //   stagger:-0.3
+// })
+
+// // and the action =============
+// function action(){
+
+//   rays.forEach(function(ray, i) {
+//     var action = gsap.to(ray, {
+//       scale:0.8,
+//       rotation:'+=' + 'random(-3, 3)',
+//       duration: "random(0.5, 1)", // NO refresh!
+//       ease:'random(none, power2, power1.inOut)', 
+//       repeat:-1, yoyo:true, repeatRefresh: true
+//     });
+//     action.play();
+//   })
+// }
+
+
+
+
+
+        // tm.set(" #vcard_198, #vcard_9, #cardEl,  #linkedin, #vCard, #instagram, .d-none", { opacity: 0, display: 'none' });
+        // tm.to(".cball", 1, { x: cardY, y: cardX, duration: 0.3, ease: 'cubic.inOut', opacity: 0 })
+        // .to(".card, .whitecircles",1,{rotate:360, opacity:0, transformOrigin:'center'});
+        
+
+        // tm.to("#cardEl",{
+        //     opacity:1, display:'block'
+        // });
+        // var cdY = jQuery("#cardFirst").height() / 2;
+        // var cdX = jQuery("#cardFirst").width() / 2;
+        // tm.to(".cardElBalls, #SVGID_1_,.circles",{
+        //     x:cdX, y:cdY,
+        //     opacity:0,
+        //     rotate:360,
+        //     scale:0.25 
+        // });
+        // tm.to("#rec",{ scale:1.25, transformOrigin:'center', opacity:0})
+        
+
+        // // #3rd
+        
+        //  tm.to("#vCard",{ opacity:1, display:'block'}).then(
+        //     tl.to("#vcard_22",{x:-10, y:80, duration:8,  ease:'cubic.inOut'})
+        //     .to("#vcard_22",{x:-10, y:-80, duration:6, repeat:-1,  ease:'cubic.inOut',yoyo: true,}),
+        //     tl.to("#vcard_24",{x:-50, y:0, duration:8,  ease:'cubic.inOut'})
+        //     .to("#vcard_24",{x:10, y:-0, duration:6, repeat:-1,  ease:'cubic.inOut',yoyo: true,}),
+        //     tl.to("#vcard_23",{x:-10, y:-80, duration:8,  ease:'cubic.inOut'})
+        //     .to("#vcard_23",{x:-10, y:80, duration:6, repeat:-1,  ease:'cubic.inOut',yoyo: true,}),
+        //     tl.to("#vcard_25",{x:-10, y:80, duration:8,  ease:'cubic.inOut'})
+        //     .to("#vcard_25",{x:-10, y:-80, duration:6, repeat:-1,  ease:'cubic.inOut',yoyo: true,}),
+        //     tm.fromTo("#vcard_17",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:0.5,  opacity:1}, '+=1'),
+        //     tm.fromTo("#vcard_0",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:0.5,  opacity:1}, '+=1'),
+        //     tl.play()
+        //  ) 
+        //     //instagram 
+        //     tm.fromTo("#vcard_20",{x:-100, y:-50, scale:0.8, display:"block",  opacity:1}, {x:0, y:150, duration:0.25,  opacity:1}, '+=2').then(
+        //         tm.to("#vcard_20",{x:25, scale:0.25, transformOrigin:'top left', display:"block",  opacity:1},'+=2'),
+        //         tm.to("#vcard_20",{x:25, scale:0.25, transformOrigin:'top left', display:"block",  opacity:0}),
+        //         tm.to("#vcard_9",{x:0, y:0, display:"block",  opacity:1})
+        //     )
+        //     // linked
+        //     tm.fromTo("#vcard_21",{x:-100, y:-50, scale:0.8, display:"block",  opacity:1}, {x:-50, y:150, duration:0.25,  opacity:1}, '+=2').then(
+        //         tm.to("#vcard_21",{x:-18, scale:0.25, transformOrigin:'top left', display:"block",  opacity:1},'+=2'),
+        //         tm.to("#vcard_21",{x:-18, scale:0.25, transformOrigin:'top left', display:"block",  opacity:0}),
+        //         tm.to("#vcard_36",{x:0, y:0, display:"block",  opacity:1})
+        //     )
+        //     tm.fromTo("#vcard_31",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:0.25, opacity:1}, '+=1')
+           
+        //     tm.fromTo("#vcard_26",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:1,  opacity:1}, '+=1').then(
+        //         tm.to("#vcard_26",{rotate:360, transformOrigin:'bottom left', duration:15, repeat:-1,ease:'cubic.inOut', opacity:1}, '+=1'),
+        //         tm.to("#vcard_31",{rotate:360, transformOrigin:'bottom left', duration:15, repeat:-1,ease:'cubic.inOut', opacity:1}, '+=1')
+        //     )
+    </script>
+</body>
+
+</html>
