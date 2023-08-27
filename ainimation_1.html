@@ -319,7 +319,7 @@
         tm.set("#linkedin",{x:0,y:600, opacity:0, scale:0.5, opacity:0, display:'none'})
         // tm.set("#dName",{opacity:0,x:0, y:0}),
         tm.set("#vcard_17",{ opacity:0, display:'none'})
-        tm.set("#cardFirst",{scale:1,display:'block'})
+        tm.set("#cardFirst",{scale:1, opacity:1, duration:0.6})
         tm.set("#cardEl",{scale:0,opacity:0, display:'none'})
         tm.set(".vCardBalls",{x:-600, y:-500, opacity:0, display:'none'})
         // var vard18 =  $('#vcard_18')[0].getBoundingClientRect();
@@ -328,7 +328,7 @@
         
        
         // balls 
-        tm.to("#cardFirst",0.24,{duration:3, display:'block', scale:1, ease:Elastic.easeOut},'+=0.005');
+        tm.to("#cardFirst",0.24,{duration:3, display:'block', ease:Elastic.easeOut},'+=0.005');
         tm.to('.cball',1,{
                 x:cardX, 
                 y:cardY,  
@@ -342,15 +342,19 @@
             var cdY = jQuery("#cardEl").height() / 2;
             var cdX = jQuery("#cardEl").width() / 2;
             function hideAni(){
-                console.log(cdX, cdY)
-                tm.to("#cardFirst",{scale:0,display:'none'});
+                tm.to("#cardFirst",{scale:0.5, duration:0.4, opacity:0});
                 tm.to("#cardEl",{scale:1, opacity:1, display:'block', ease:Elastic.easeOut, onComplete:()=>{
                 tm.to("#SVGID_1_",{x:randomNumber(150, 5), y:randomNumber(805, 5), yoyo: true, duration:1, scale:0.25, opacity:0, transformOrigin: 'center',  ease:'cubic.inOut' })
-                tm.to(".cardElBalls, #SVGID_1, .cardElCircle, .cardElItem, .imgs",0.5,{
+                 tm.to(".cardElBalls",{
+                     x:randomNumber(150, 5), 
+                    y:randomNumber(805, 5), 
+                    duration:0.4
+                 })
+                tm.to("#SVGID_1, .cardElCircle, .cardElItem, .imgs",{
                     x:randomNumber(150, 5), 
                     y:randomNumber(805, 5), 
                     yoyo: true, 
-                    duration:1, 
+                    duration:0.6, 
                     scale:0.25, 
                     opacity:0, 
                     transformOrigin: 'center',  
