@@ -274,13 +274,6 @@
          function randomNumber(min, max) {
             return Math.floor(Math.random() * (max - min + 15)) + min;
         }
-        //  function moveEl(selector){
-        //     var tm = new TimelineMax({ yoyo: true });
-        //     tm.fromTo(selector,
-        //     {x:0,y:randomNumber(0, 80), scale:0.9},
-        //     {x:-randomNumber(5, 10), y:-randomNumber(0, 80), repeat:-1, duration:6, yoyo:true, ease:'cubic.inOut'})
-        //     tm.play();
-        // }
         var cardY = jQuery("#cardFirst").height() / 2;
         var cardX = jQuery("#cardFirst").width() / 2;
         var tl = gsap.timeline();
@@ -308,14 +301,9 @@
         tl.to('.green-card-01',{x:randomNumber(150,200), y:100, duration:8, ease: 'cubic.inOut', opacity:0})
         tl.to('.green-card-02',{x:randomNumber(180,200), y:50, duration:5, ease: 'cubic.inOut', opacity:0})
         tl.to('.green-card-03',{x:randomNumber(140,165), y:75, duration:5, ease: 'cubic.inOut', opacity:0})
-        // tl.to('.red-ball-03',{x:200, y:700, duration:5, ease: 'cubic.inOut', opacity:0})
-        // tm.to(".card-inner",{duration:1, rotate:360, ease: "power2.inOut", transformOrigin:'center center'})
-        // tm.to(".card-inner, .red-ball-01, .red-ball-02, .red-ball-03",{opacity:0, display:'none'},'+=2');
-        // tm.to(".green-card-03",{x:200, y:500, duration:5, ease: 'cubic.inOut', opacity:1})
-        // tm.to(".green-card-01",{x:300, y:250, duration:5, ease: 'cubic.inOut', opacity:1})
+        tl.to('.green-card-04',{x:randomNumber(150,175), y:150, duration:5, ease: 'cubic.inOut', opacity:0})
         tm.set(".sp-cards,.second-card",{opacity:0, display:'none'});
         tm.to(".card",{opacity:1, display:'block', onComplete:action})
-        // tm.to(".green-card-01",{x:300, y:250, duration:5, ease: 'cubic.inOut', opacity:1})
         tm.to(".green-card-03",{x:200, y:500, duration:5, ease: 'cubic.inOut', opacity:1})
         function action(){
             var angles = [0, 45, 90, 135, 180, 225, 270, 315,360,405, 450];
@@ -332,62 +320,8 @@
                     ease:"power2.inOut",    
                     position:'absolute',
                 })
-                // tm.play();
             }
         }
-        // tm.to(".green-card-03",{x:randomNumber(200, 350), y:randomNumber(150, 200), duration:5, ease: 'cubic.inOut', opacity:1})
-
-
-        // tm.to(".card-inner",2,{ rotate:360,  duration:1, transformOrigin:'center center'},'+=0.25'),
-       
-
-        // tm.to(".first-card",{opacity:1, onStart:greenMoveBalls})
-        // tm.to(".fcard",{ rotate:360, duration:0.8, transformOrigin:'center center'},'+=0.25'),
-        // tm.to(".card",{onComplete:action, opacity:1, display:'block', transformOrigin:'bottom right'})
-        
-       
-        // function greenMoveBalls(){
-        //     var arr=['.green-card-01','.green-card-02','.green-card-03','.green-card-04']
-        //     tm.to(".card-inner, .second-card",{ opacity:0});
-        //     for(let i=0; i<arr.length; i++){
-        //         gsap.to(arr[i],{opacity:1}).to(arr[i],{x:400, y:250, duration:2,  ease: 'cubic.inOut', opacity:0})
-        //     }
-        //     tm.play();
-        // }
-        // function moveBalls(){
-        //     var arr=['.red-ball-01','.red-ball-02','.red-ball-03']
-        //         gsap.to('.red-ball-01',{x:300, y:250, duration:5, ease: 'cubic.inOut', opacity:0})
-        //         gsap.to('.red-ball-02',{x:100, y:400, duration:5, ease: 'cubic.inOut', })
-        //         gsap.to('.red-ball-02',{x:100, y:200, duration:10, ease: 'cubic.inOut', repeat:-1, opacity:1})
-        //         gsap.to('.red-ball-03',{x:0, y:250, duration:5, ease: 'cubic.inOut', opacity:0})
-        //     tm.play();
-        // }
-        // function action(){
-        //     var angles = [0, 45, 90, 135, 180, 225, 270, 315,360,405, 450];
-        //     for(let i=0; i<angles.length; i++){
-        //         var ids = $(".card-"+i);
-        //         gsap.to(ids,{
-        //             rotate:angles[i],
-        //             transformOrigin:'bottom right',
-        //             scale:0.5,
-        //             duration:0.5,
-        //             x:-200,
-        //             y:-150,
-        //             onStart:ballsAnimation,
-        //             position:'absolute',
-        //         })
-               
-        //     }
-        // }
-
-        // function ballsAnimation(){
-        //     var arr=['.greenball-0','purpleBall-02']
-        //     for(let i=0; i<arr.length; i++){
-        //         gsap.to(arr[i],{x:400, y:250, duration:2,  ease: 'cubic.inOut', opacity:0})
-        //     }
-        //     tm.play();
-        // }
-
     </script>
 </body>
 
