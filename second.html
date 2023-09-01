@@ -296,14 +296,18 @@
         tm.set(".fcard",{ x:150});
         tm.to(".second-card",2,{duration:2,display:'block',opacity:1})
         .to(".card-inner",{x:100, duration:1,transformOrigin:'center center'})
-        .to(".card-inner",{x:0, rotate:360, duration:2,transformOrigin:'center center'})
+        .to(".card-inner",{x:0, rotate:360, duration:2,transformOrigin:'center center'},'+=1')
         .to(".card-inner",{duration:1,transformOrigin:'center center', opacity:0})
+        tl.to('.red-ball-01, .red-ball-02',{x:randomNumber(150,200), y:100, duration:4, ease: 'cubic.inOut', opacity:0})
+        tl.to('.red-ball-03',{x:randomNumber(180,200), y:50, duration:5, ease: 'cubic.inOut', opacity:0})
+        tl.to('.red-ball-01',{x:randomNumber(140,165), y:75, duration:5, ease: 'cubic.inOut', opacity:0})
         tm.to(".first-card",{opacity:1, display:'block'});
         tm.to(".fcard",{x:0, opacity:1, duration:1, transformOrigin:'center center'});
         tm.to(".fcard",{ x:200, transformOrigin:'center center'});
-        tm.to(".fcard",{ x:0,rotate:360, duration:1, transformOrigin:'center center'});
-        // tl.to('.red-ball-01',{x:300, y:250, duration:5, ease: 'cubic.inOut', opacity:0})
-        // tl.to('.red-ball-02',{x:100, y:400, duration:5, ease: 'cubic.inOut', opacity:0})
+        tm.to(".fcard",{ x:0,rotate:360, duration:2, transformOrigin:'center center'},'+=1');
+        tl.to('.green-card-01',{x:randomNumber(150,200), y:100, duration:8, ease: 'cubic.inOut', opacity:0})
+        tl.to('.green-card-02',{x:randomNumber(180,200), y:50, duration:5, ease: 'cubic.inOut', opacity:0})
+        tl.to('.green-card-03',{x:randomNumber(140,165), y:75, duration:5, ease: 'cubic.inOut', opacity:0})
         // tl.to('.red-ball-03',{x:200, y:700, duration:5, ease: 'cubic.inOut', opacity:0})
         // tm.to(".card-inner",{duration:1, rotate:360, ease: "power2.inOut", transformOrigin:'center center'})
         // tm.to(".card-inner, .red-ball-01, .red-ball-02, .red-ball-03",{opacity:0, display:'none'},'+=2');
