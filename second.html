@@ -283,7 +283,6 @@
                 var ids = $(".card-"+i);
                 tm.set(ids,{opacity:0,x:0,y:0, rotate:0})
             }
-
         // first card show
         tm.set(".card-inner",{ x:-100});
         tm.set(".fcard",{ x:150});
@@ -305,6 +304,7 @@
         tm.set(".sp-cards,.second-card",{opacity:0, display:'none'});
         tm.to(".card",{opacity:1, display:'block', onComplete:action})
         tm.to(".green-card-03",{x:200, y:500, duration:5, ease: 'cubic.inOut', opacity:1})
+       
         function action(){
             var angles = [0, 45, 90, 135, 180, 225, 270, 315,360,405, 450];
             for(let i=0; i<angles.length; i++){
