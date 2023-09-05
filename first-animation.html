@@ -158,7 +158,7 @@
            C268.72,342.84,266.07,345.5,262.79,345.5z" />
                 <path id="vcard_5" fill="#9fe870" d="M260.43,410.72H85.02c-3.279,0-5.939-2.66-5.939-5.939v-14.14c0-3.281,2.66-5.94,5.939-5.94h175.4
            c3.28,0,5.939,2.659,5.939,5.94v14.14C266.36,408.06,263.7,410.72,260.43,410.72z" />
-                <path id="vcard_6" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="2" stroke-miterlimit="10" d="M262.79,377.641H87.38
+                <path id="vcard_6" style="opacity:0" fill="#FFFFFF" stroke="#E1E1E1" stroke-width="2" stroke-miterlimit="10" d="M262.79,377.641H87.38
            c-3.28,0-5.94-2.66-5.94-5.94v-14.14c0-3.281,2.66-5.94,5.94-5.94H262.78c3.28,0,5.94,2.659,5.94,5.94v14.14
            C268.72,374.99,266.07,377.641,262.79,377.641z" />
                 <path id="vcard_7" fill="#9fe870" d="M291.19,177.28H239.91c-1.62,0-2.94-1.311-2.94-2.94v-0.64c0-1.62,1.31-2.94,2.94-2.94h51.279
@@ -180,6 +180,9 @@
                 <g id="vcard_19" class="hel">
                     <text transform="matrix(1 0 0 1 81.446 310.1328)" font-family="'ArialRoundedMTBold'"
                         font-size="9.2416">Details</text>
+                </g>
+                <g id="vcard_10">
+                    <text transform="matrix(1 0 0 1 81.4456 336.1094)" enable-background="new    "><tspan x="0" y="0" font-family="'ArialMT'" font-size="9.6903">Lorem ipsum dolor sit amet, consectetur </tspan><tspan x="0" y="11.628" font-family="'ArialMT'" font-size="9.6903">adipiscing elit. In in neque congue, lacinia </tspan><tspan x="0" y="23.257" font-family="'ArialMT'" font-size="9.6903">diam ac, fringilla ipsum. Quisque iaculis </tspan><tspan x="0" y="34.885" font-family="'ArialMT'" font-size="9.6903">luctus orci, non ullamcorper neque.</tspan></text>
                 </g>
                 <g id="vcard_36" class="d-none">
                     <path id="XMLID_2101_" opacity="0.24" fill="#222221" enable-background="new    " d="M92.69,291.05L92.69,291.05
@@ -221,15 +224,15 @@
                    S125.63,276,125.63,276.42" />
                     </g>
                 </g>
-                <g id="vcard_10" class="hel">
+                <!-- <g id="vcard_10" class="hel">
                     <text transform="matrix(1 0 0 1 98.6414 336.1094)" font-family="'ArialMT'" font-size="9.6903">www.website.com</text>
-                </g>
-                <g id="vcard_11" class="hel">
+                </g> -->
+                <!-- <g id="vcard_11" class="hel">
                     <text transform="matrix(1 0 0 1 98.6414 367.7861)" font-family="'ArialMT'" font-size="10.0286">PDF Documents</text>
-                </g>
+                </g> -->
                 <text id="vcard_12" transform="matrix(1 0 0 1 139.3562 400.2998)" fill="#FFFFFF" font-family="'ArialMT'"
                     font-size="9.6837">Add to contacts</text>
-                <g id="vcard_13">
+                <g id="vcard_13" style="opacity: 0;">
                     <polyline points="256.85,368.33 249.19,368.33 249.19,369.29 256.85,369.29 		" />
                     <path d="M256.5,363.75l-3.41,3.4c-0.03,0.05-0.101,0.05-0.14,0l-3.4-3.4c-0.04-0.04-0.04-0.1,0-0.13l0.75-0.761l2.15,2.15v-4.55
                c0-0.101,0.079-0.181,0.18-0.181h0.8c0.1,0,0.18,0.08,0.18,0.181v4.55l2.141-2.15l0.75,0.761
@@ -417,6 +420,7 @@
                 tm.to("#vcard_36",{x:0, y:0, display:"block",  opacity:1})
             )
             tm.fromTo("#vcard_31",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:0.25, opacity:1}, '+=1')
+            tm.fromTo("#vcard_10",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:0.25, opacity:1}, '+=1')
            
             tm.fromTo("#vcard_26",{x:'-15%', y:'18%', display:"block", opacity:0}, {x:0, y:0, duration:1,  opacity:1}, '+=1').then(
                 tm.to("#vcard_26",{rotate:360, transformOrigin:'bottom left', duration:15, repeat:-1,ease:'cubic.inOut', opacity:1}, '+=1'),
